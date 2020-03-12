@@ -6,10 +6,10 @@
 
 <h1>Create Post</h1>
 <form action="/posts" method="post">
-	<p><label for="title">Title: </label><input type="text" name="title" id="title" /></p>
-	<p><label for="author">Author: </label><input type="text" name="author" id="author" /></p>
-	<p><label for="date">Date: </label><input type="date" name="date" id="date" /></p>
-	<p><label for="body">Say it: </label><textarea name="body" id="body">Lorem ipsum</textarea></p>
+	<p><label for="title">Title: </label><input type="text" name="post[title]" id="title" /></p>
+	<p><label for="author">Author: </label><input type="text" name="post[author]" id="author" /></p>
+	<p><label for="date">Date: </label><input type="date" name="post[date]" id="date" /></p>
+	<p><label for="body">Say it: </label><textarea name="post[body]" id="body">Lorem ipsum</textarea></p>
 
 	<p><input type="submit" /></p>
 </form>
