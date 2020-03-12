@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
     end
 	
 	post '/posts' do
-		@post = Post.new(params)
+		@post = Post.new(params["post"])
 		redirect to "/posts/#{@post.id}"
 	end
 	
@@ -39,7 +39,7 @@ class ApplicationController < Sinatra::Base
 	
 	patch '/posts/:id' do
         post = Post.find(params[:id])
-        post.update(params["posts"])
+        post.update(params["post"])
         redirect to "/posts/#{@post.id}"
 	end
 
