@@ -1,0 +1,16 @@
+<h1>All Posts</h1>
+
+
+<ol>
+<% @posts.each do |post| %>
+	<li><a href='/posts/<%= post.id %>'><%= post.title %></a></li>
+<% end %>
+</ol>
+
+
+
+<br></br>
+<!-- Button just for funsies -->
+<form action="/posts/new" method="GET">
+    <input type="submit" value="Create Post">
+</form>

@@ -1,0 +1,19 @@
+<!-- 
+# table_name	columns
+# posts			:id, :title, :author, :date, :body 
+-->
+
+
+<h1>Viewing Post: <%= @post.id %></h1>
+<h3><a href='/posts/<%= @post.id %>/edit'>Edit this post</a></h3>
+<p>Title: <%= @post.title %></p>
+<p>Author: <%= @post.author %></p>
+<p>Date: <%= @post.date %></p>
+<p>Body: <span id="body"><%= @post.body %></span></p>
+
+<p><a href='/posts'>See all posts</a></p>
+
+<form action="/posts/<%= @post.id%>" method="POST">
+	<input type="hidden" name="_method" value="DELETE">
+	<input type="submit" value="delete">
+</form>
